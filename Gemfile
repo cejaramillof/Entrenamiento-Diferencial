@@ -31,8 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'haml-rails'
-gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'jquery-rails'
 
 
 # Use Capistrano for deployment
