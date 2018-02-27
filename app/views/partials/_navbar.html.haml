@@ -26,7 +26,7 @@
               %i.icon-th-thumb
               %i.icon-down-open-big.fa
             %ul.dropdown-menu.user-menu
-              %li.active
+              %li
                 %a{:href => "account-home.html"}
                   %i.fa.fa-hand-o-right.fa-fw
                   En vivos
@@ -77,3 +77,15 @@
           -#        %span.lang-name Spanish
       / /.nav-collapse
     / /.container-fluid
+:javascript
+  $(function () {
+    $('.navbar-collapse').on('shown.bs.collapse', function(e) {
+      $('.dropdown-toggle').dropdown('toggle', 'open').hide();
+      console.log('shown:', e);
+    });
+  })    
+  $(function() {
+    $(document).click(function (event) {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
